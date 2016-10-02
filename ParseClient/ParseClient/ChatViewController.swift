@@ -17,10 +17,11 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBAction func send(_ sender: AnyObject) {
         let message = PFObject(className:"Message_fbuJuly2016")
         message["text"] = messageText.text
+        message["userProf"] = PFUser.current()?.username
+        print(PFUser.current()?.username);
         message.saveInBackground {
             (success, error) -> Void in
             if (success) {
-                print(self.messageText.text)
                 self.messageText.text = ""
                 // The object has been saved.
             } else {
@@ -87,12 +88,15 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath as IndexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath as IndexPath) as! MessageTableViewCell
         if let temp = self.messages[indexPath.row] as? PFObject{
-            cell.textLabel!.text = (self.messages[indexPath.row] as! PFObject).object(forKey: "text") as! String?
+            cell.messageBody.text = (self.messages[indexPath.row] as! PFObject).object(forKey: "text") as! String?
+            if let tempUser = (self.messages[indexPath.row] as! PFObject).object(forKey: "userProf") as? String? {
+                //print(tempUser.username)
+                cell.userLable.text = tempUser
+            }
         }
         
-        print("row \(indexPath.row)")
         return cell
     }
     
