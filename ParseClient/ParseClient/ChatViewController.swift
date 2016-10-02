@@ -7,16 +7,19 @@
 //
 
 import UIKit
+import Parse
 
 class ChatViewController: UIViewController {
 
     @IBOutlet weak var messageText: UITextField!
     @IBAction func send(_ sender: AnyObject) {
-        var message = PFObject(className:"Message_fbuJuly2016")
+        let message = PFObject(className:"Message_fbuJuly2016")
         message["text"] = messageText.text
-        gameScore.saveInBackgroundWithBlock {
-            (success: Bool, error: NSError?) -> Void in
+        message.saveInBackground {
+            (success, error) -> Void in
             if (success) {
+                print(self.messageText.text)
+                self.messageText.text = ""
                 // The object has been saved.
             } else {
                 // There was a problem, check error.description
