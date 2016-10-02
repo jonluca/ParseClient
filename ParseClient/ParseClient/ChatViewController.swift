@@ -10,6 +10,21 @@ import UIKit
 
 class ChatViewController: UIViewController {
 
+    @IBOutlet weak var messageText: UITextField!
+    @IBAction func send(_ sender: AnyObject) {
+        var message = PFObject(className:"Message_fbuJuly2016")
+        message["text"] = messageText.text
+        gameScore.saveInBackgroundWithBlock {
+            (success: Bool, error: NSError?) -> Void in
+            if (success) {
+                // The object has been saved.
+            } else {
+                // There was a problem, check error.description
+            }
+        }
+
+
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
