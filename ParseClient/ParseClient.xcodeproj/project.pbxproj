@@ -12,6 +12,7 @@
 		087464BB1DA0D193008C3053 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 087464B91DA0D193008C3053 /* Main.storyboard */; };
 		087464BD1DA0D193008C3053 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 087464BC1DA0D193008C3053 /* Assets.xcassets */; };
 		087464C01DA0D193008C3053 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 087464BE1DA0D193008C3053 /* LaunchScreen.storyboard */; };
+		08C19CD41DA0E1270059231E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C19CD31DA0E1270059231E /* ChatViewController.swift */; };
 		CF12A880C95DC6FB2FFC9885 /* Pods_ParseClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11222F610F00D1CA2BD7F7A0 /* Pods_ParseClient.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		087464BC1DA0D193008C3053 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		087464BF1DA0D193008C3053 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		087464C11DA0D193008C3053 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08C19CD31DA0E1270059231E /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		11222F610F00D1CA2BD7F7A0 /* Pods_ParseClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParseClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77C381F621EBE08C6D906C79 /* Pods-ParseClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParseClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParseClient/Pods-ParseClient.release.xcconfig"; sourceTree = "<group>"; };
 		FC24FC49E6A6FD6C48929785 /* Pods-ParseClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParseClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParseClient/Pods-ParseClient.debug.xcconfig"; sourceTree = "<group>"; };
@@ -44,6 +46,7 @@
 			isa = PBXGroup;
 			children = (
 				0831C6541DA0D34A00356212 /* LoginViewController.swift */,
+				08C19CD31DA0E1270059231E /* ChatViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -132,6 +135,7 @@
 					087464B11DA0D193008C3053 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = XD92VBX7GT;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -221,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0831C6551DA0D34A00356212 /* LoginViewController.swift in Sources */,
+				08C19CD41DA0E1270059231E /* ChatViewController.swift in Sources */,
 				087464B61DA0D193008C3053 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
