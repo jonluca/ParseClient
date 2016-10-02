@@ -58,7 +58,9 @@ class LoginViewController: UIViewController {
                     
                 }
             } else {
-                print("User logged in successfully")
+                let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc : ChatViewController = mainStoryboard.instantiateViewController(withIdentifier: "vcMainLogin") as! ChatViewController
+                self.present(vc, animated: true, completion: nil)
                 // display view controller that needs to shown after successful login
             }
         }
